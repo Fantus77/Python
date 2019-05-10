@@ -17,5 +17,5 @@ def orientation():
 
 
 orientation()
-tree(100, 5)
+tree(100, 8)
 input()
