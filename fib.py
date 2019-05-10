@@ -1,20 +1,4 @@
 
-
-"""
-def fibSum(N):
-    if N == 1:
-        return 1
-    else:
-        return 0
-    if N == (N + 1):
-
-
-def fib2():
-    X = 1
-    Y = X + X
-    Z = X + Y
-"""
-
 def fib(X):
     #N = (X - 1) + (X - 2)
     if X == 1:
@@ -23,9 +7,6 @@ def fib(X):
         return 1
     if X >= 3:
         return fib(X - 1) + fib(X - 2)
-
-
-
 
 
 # EXPECTED VALUES - TEST CASES
