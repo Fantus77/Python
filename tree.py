@@ -60,7 +60,7 @@ def tree(length, levels):
 
 def orientation():
 	tt.left(90)
-	tt.speed(100)
+	tt.speed(1)
 
 
 
@@ -76,7 +76,7 @@ EZ
 """
 
 orientation()
-tree(100, 12)
+tree(100, 5)
 
 
 
