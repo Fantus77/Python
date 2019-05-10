@@ -22,27 +22,45 @@ def tree(levels):
 
 	branches(levels, fmove / 2)
 """
-def branches(fmove):
-	if counter == 1:
-		
-
-
-
-def tree(levels):
-	counter = 0
+"""
+# This makes a "Y" tree and leaves the turtle perpendicular to the left branch
+def branches():
 	halfturn = 45
 	fullturn = 90
 	fmove = 100
 	tt.left(fullturn)
 	tt.forward(fmove)
-	if counter < levels:
-		branches(fmove)
-		counter = counter + 1
-		tree()
-	elif counter == levels:
-		branches(fmove)
+	tt.left(halfturn)
+	tt.forward(fmove / 2)
+	tt.forward(-fmove / 2)
+	tt.right(fullturn)
+	tt.forward(fmove / 2)
+	tt.forward(-fmove / 2)
+
+	def tree(length):
+	tt.forward(length)
+	tt.left(45)
+	level1(length / 2)
+	tt.right(90)
+	level1(length / 2)
+	tt.left(45)
+	tt.forward(-length)
+"""
 
 
+def tree(length, levels):
+	tt.forward(length)
+	if levels >= 2:
+		tt.left(45)
+		tree(length / 2, levels - 1)
+		tt.right(90)
+		tree(length / 2, levels - 1)
+		tt.left(45)
+	tt.forward(-length)
+
+def orientation():
+	tt.left(90)
+	tt.speed(100)
 
 
 
@@ -57,8 +75,11 @@ Function that is called from the first function should make the branches. The ma
 EZ
 """
 
+orientation()
+tree(100, 12)
 
 
 
-tree(3)
+#branches()
+#tree(3)
 input()
