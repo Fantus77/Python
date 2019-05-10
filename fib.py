@@ -21,8 +21,8 @@ def fib(X):
         return 1
     if X == 2:
         return 1
-    if X == 3:
-        return fib(X - 1) + 1
+    if X >= 3:
+        return fib(X - 1) + fib(X - 2)
 
 
 
@@ -38,4 +38,4 @@ print(fibSum(1) == 1) # 1
 print(fibSum(3) == 4) # 1 + 1 + 2
 print(fibSum(8) == 54) # 1 + 1 + 2 + 3 + 5 + 8 + 13 + 21
 """
-fib(3)
+fib(6)
