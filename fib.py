@@ -30,5 +30,6 @@ print(fibSum(1) == 1) # 1
 print(fibSum(3) == 4) # 1 + 1 + 2
 print(fibSum(8) == 54) # 1 + 1 + 2 + 3 + 5 + 8 + 13 + 21
 """
+
 fib(6)
 #fibSum()
