@@ -13,15 +13,19 @@ print(fib(1) == 1)
 print(fib(2) == 1)
 print(fib(6) == 8)
 """
-#This doesn't work...need to figure out proper formula still
+fibCalc():
+    n = 
+
+
+#This doesn't work...need to figure out proper formula still. Thought for formula is to have it take the fib function's formula and generate the sums based off of postions with that to get the answer for fibSum
 def fibSum(Y):
     #N = fibSum(??) ?+? fibSum(??)
     if Y == 1:
         return 1
     if Y == 3:
         return 4
-    if Y >= 3:
-        return fibSum(Y - 1) + fibSum(Y - 2) #Is it the same as fib? I think it has to do more with adding positions together...but how to describe that in the formula?
+    if Y >= 4:
+        return fibSum(Y - 1) + fibSum(Y - 2)
 
 
 
@@ -32,4 +36,5 @@ print(fibSum(8) == 54) # 1 + 1 + 2 + 3 + 5 + 8 + 13 + 21
 
 
 #fib(6)
-fibSum(35)
+fibCalc()
+fibSum(8)
