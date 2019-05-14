@@ -13,18 +13,20 @@ print(fib(1) == 1)
 print(fib(2) == 1)
 print(fib(6) == 8)
 """
-
-#This doesn't work...need to figure out proper formula still. Thought for formula is to have it take the fib function's formula and generate the sums based off of postions with that to get the answer for fibSum.
-#Y = position in fib string
-#Need to make fib take Y and figure out the number in that position, then figure out all previous numbers and add them all together
+"""
+This now works! It's as simple as:
+1. fibSum(X) - Enter the number that coorisponds to the position in fib where you want to start as X
+2. fibSum(X) will take that number, and using fib(), calculate the value of that position
+3. fibSum(X) will then add that value to the value before it by taking 1 away from X before the recursion
+4. Once X becomes < 1 then fibSum(X) will return 0 and the total sum of all the positions of fib will be calculated
+"""
 def fibSum(Y):
     if Y >= 1:
+        #return fib(Y) + fibSum(Y - 1)
         return str(fib(Y)) + "+" + str(fibSum(Y - 1))
     else:
+        #return 0
         return "0"
-
-
-
 """
 # EXPECTED VALUES - TEST CASES FOR fibSum
 print(fibSum(1) == 1) # 1
@@ -32,6 +34,9 @@ print(fibSum(3) == 4) # 1 + 1 + 2
 print(fibSum(8) == 54) # 1 + 1 + 2 + 3 + 5 + 8 + 13 + 21
 """
 
-#fib(6)
-fibSum(8)
-print (fibSum(8))
+fib(12)
+print (fib(12))
+"""
+fibSum(12)
+print (fibSum(12))
+"""
