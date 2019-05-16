@@ -43,7 +43,7 @@ def runme():
 		restart = choice(input())
 
 def choice(input):
-	selection = int(input)
+	selection = float(input)
 	if selection == 1:
 		square()
 		return True
@@ -57,9 +57,9 @@ def choice(input):
 		exit
 	elif selection < 1:
 		print("Not a valid selection, try again...")
-		return False
+		return True
 	elif selection > 4:
 		print("Not a valid selection, try again...")
-		return False
+		return True
 
 runme()
