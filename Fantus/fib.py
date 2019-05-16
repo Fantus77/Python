@@ -1,6 +1,5 @@
 
 def fib(X):
-    #N = (X - 1) + (X - 2)
     if X == 1:
         return 1
     if X == 2:
