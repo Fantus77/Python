@@ -1,0 +1,34 @@
+"""
+Annual_Salary - Input by user: How much money they make in a year
+Portion_Saved - Input by user: How much of their salary per month they will put in savings (needs to be decimal)
+Total_Cost - Input by user: How much the home costs
+Portion_Down_Payment - How much of the Total_Cost needs to be in savings (25%)
+Current_Savings - The amount that has been collected that needs to == Down_Payment_Amount (Starts at 0)
+r - This is the annual return on investment from Current_Savings (4%)
+Monthly_Salary - This needs to be figured out from Annual_Salary to determine salary on monthly basis (Annual_Salary / 12)
+Put_Away - How much money should be added to Current_Savings each month (Monthly_Salary * Portion_Saved)
+Down_Payment_Amount - This is the amount that needs to be == Current_Savings
+"""
+
+
+# Need to take the value entered for Annual_Salary, Portion_Saved, and Total_Cost
+# Annual_Salary = input()
+# Portion_Saved = input()
+# Total_Cost = input()
+
+
+# Down_Payment_Amount
+Total_Cost * Portion_Down_Payment
+
+# Current_Savings
+Current_Savings = 0
+
+# r
+r = 0.04
+
+# Monthly_Salary
+Monthly_Salary = Annual_Salary / 12
+
+# Put_Away
+(Monthly_Salary * Portion_Saved) + (Current_Savings * r / 12)
+
