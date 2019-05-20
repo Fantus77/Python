@@ -10,7 +10,7 @@ Put_Away - How much money should be added to Current_Savings each month (Monthly
 Down_Payment_Amount - This is the amount that needs to be == Current_Savings
 """
 
-
+"""
 # Need to take the value entered for Annual_Salary, Portion_Saved, and Total_Cost
 # Annual_Salary = input()
 # Portion_Saved = input()
@@ -31,4 +31,13 @@ Monthly_Salary = Annual_Salary / 12
 
 # Put_Away
 (Monthly_Salary * Portion_Saved) + (Current_Savings * r / 12)
+"""
+# Let's do this where we work in a chain. Starting with collecting the inputs and then moving to the next function where they are calculated and passed to the next function which does the next calculation
 
+def first(Annual_Salary, Portion_Saved, Total_Cost)
+# Pass Monthly_Salary
+    Monthly_Salary = Annual_Salary / 12
+    Portion_Down_Payment = 0.25
+# Setting up downpayment total
+    Down_Payment_Amount = Total_Cost * Portion_Down_Payment
+    
