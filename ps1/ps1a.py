@@ -35,14 +35,18 @@ Monthly_Salary = Annual_Salary / 12
 # Let's do this where we work in a chain. Starting with collecting the inputs and then moving to the next function where they are calculated and passed to the next function which does the next calculation
 
 def first(Annual_Salary, Portion_Saved, Total_Cost):
-# Pass Monthly_Salary
+# setting up what the monthly salary is as well as how much the down payment should be and the ROI percentage
     Monthly_Salary = Annual_Salary / 12
     Portion_Down_Payment = 0.25
-# Setting up downpayment total
+    r = 0.04
+# figuring out how much the down payment should be based on the total cost
     Down_Payment_Amount = Total_Cost * Portion_Down_Payment
-# Setting up how much should be added to Current_Savings
+# adding to Current_Savings until it is == Down_Payment_Amount
     Current_Savings = 0
     while Current_Savings < Down_Payment_Amount:
         Current_Savings = Current_Savings + ((Monthly_Salary * Portion_Saved) + (Current_Savings * r / 12))
-    if Current_Savings = Down_Payment_Amount:
-        Months = Down_Payment_Amount / ()
+# once Current_Savings == Down_Payment_Amount dividing Down_Payment_Amount by how much Current_Savings is increased by each month to figure out how many months it will take to save up the amount needed. Then trying to print that out
+    if Current_Savings >= Down_Payment_Amount:
+        print(Down_Payment_Amount / ((Monthly_Salary * Portion_Saved) + (Current_Savings * r / 12)))
+
+first(120000, 0.10, 1000000)
