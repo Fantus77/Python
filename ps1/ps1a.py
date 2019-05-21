@@ -34,10 +34,15 @@ Monthly_Salary = Annual_Salary / 12
 """
 # Let's do this where we work in a chain. Starting with collecting the inputs and then moving to the next function where they are calculated and passed to the next function which does the next calculation
 
-def first(Annual_Salary, Portion_Saved, Total_Cost)
+def first(Annual_Salary, Portion_Saved, Total_Cost):
 # Pass Monthly_Salary
     Monthly_Salary = Annual_Salary / 12
     Portion_Down_Payment = 0.25
 # Setting up downpayment total
     Down_Payment_Amount = Total_Cost * Portion_Down_Payment
-    
+# Setting up how much should be added to Current_Savings
+    Current_Savings = 0
+    while Current_Savings < Down_Payment_Amount:
+        Current_Savings = Current_Savings + ((Monthly_Salary * Portion_Saved) + (Current_Savings * r / 12))
+    if Current_Savings = Down_Payment_Amount:
+        Months = Down_Payment_Amount / ()
