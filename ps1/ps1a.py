@@ -45,8 +45,11 @@ def first(Annual_Salary, Portion_Saved, Total_Cost):
     Current_Savings = 0
     while Current_Savings < Down_Payment_Amount:
         Current_Savings = Current_Savings + ((Monthly_Salary * Portion_Saved) + (Current_Savings * r / 12))
+        Current_Savings = int(Current_Savings)
 # once Current_Savings == Down_Payment_Amount dividing Down_Payment_Amount by how much Current_Savings is increased by each month to figure out how many months it will take to save up the amount needed. Then trying to print that out
     if Current_Savings >= Down_Payment_Amount:
-        print(Down_Payment_Amount / ((Monthly_Salary * Portion_Saved) + (Current_Savings * r / 12)))
+        Months = Down_Payment_Amount / ((Monthly_Salary * Portion_Saved) + (Current_Savings * r / 12))
+        Months = int(Months)
+        print(Months)
 
 first(120000, 0.10, 1000000)
