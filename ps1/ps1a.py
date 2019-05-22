@@ -41,15 +41,32 @@ def first(Annual_Salary, Portion_Saved, Total_Cost):
     r = 0.04
 # figuring out how much the down payment should be based on the total cost
     Down_Payment_Amount = Total_Cost * Portion_Down_Payment
-# adding to Current_Savings until it is == Down_Payment_Amount
+    Down_Payment_Amount = int(Down_Payment_Amount)
+# adding to Current_Savings until it is >= Down_Payment_Amount
     Current_Savings = 0
-    while Current_Savings < Down_Payment_Amount:
+    Months = 0
+    while Current_Savings <= Down_Payment_Amount:
         Current_Savings = Current_Savings + ((Monthly_Salary * Portion_Saved) + (Current_Savings * r / 12))
-        Current_Savings = int(Current_Savings)
-# once Current_Savings == Down_Payment_Amount dividing Down_Payment_Amount by how much Current_Savings is increased by each month to figure out how many months it will take to save up the amount needed. Then trying to print that out
-    if Current_Savings >= Down_Payment_Amount:
-        Months = Down_Payment_Amount / ((Monthly_Salary * Portion_Saved) + (Current_Savings * r / 12))
-        Months = int(Months)
-        print(Months)
+        Months = Months + 1
+        # print(Current_Savings)
+    print("The total amount of months to save:", Months)
+        # Current_Savings = int(Current_Savings)
+# # once Current_Savings == Down_Payment_Amount dividing Down_Payment_Amount by how much Current_Savings is increased by each month to figure out how many months it will take to save up the amount needed. Then trying to print that out
+#     if Current_Savings >= Down_Payment_Amount:
+#         Months = Down_Payment_Amount / ((Monthly_Salary * Portion_Saved) + (Current_Savings * r / 12))
+#         Months = int(Months)
+#         print(Months)
 
-first(120000, 0.10, 1000000)
+# first(120000, 0.10, 1000000)
+# first(80000, 0.15, 500000)
+
+
+def runme():
+    Annual_Salary = int(input("Please enter annual salary:"))
+    Portion_Saved = float(input("Please enter percentage of monthly salary to save:"))
+    Total_Cost = int(input("Please enter the total cost of dream home:"))
+    # print(Annual_Salary)
+    first(Annual_Salary, Portion_Saved, Total_Cost)
+
+
+runme()
