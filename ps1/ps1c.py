@@ -19,13 +19,13 @@ def first(Annual_Salary, Total_Cost, Semi_Annual_Raise):
 
     # print("The total amount of months to save:", Months)
 
-# def DivisibleBySix(Months):
-#     floatVal = Months / 6.0
-#     wholeNum = int(floatVal)
-#     if floatVal - wholeNum == 0:
-#         return True
-#     else:
-#         return False
+def DivisibleBySix(Months):
+    floatVal = Months / 6.0
+    wholeNum = int(floatVal)
+    if floatVal - wholeNum == 0:
+        return True
+    else:
+        return False
 
 def runme():
     Annual_Salary = int(input("Please enter annual salary:"))
