@@ -21,7 +21,7 @@ def first(Annual_Salary, Portion_Saved, Total_Cost, Semi_Annual_Raise):
 def DivisibleBySix(Months):
     floatVal = Months / 6.0
     wholeNum = int(floatVal)
-    if (floatVal - wholeNum == 0):
+    if floatVal - wholeNum == 0:
         return True
     else:
         return False
