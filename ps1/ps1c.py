@@ -1,22 +1,26 @@
-"""
-def first(Annual_Salary, Total_Cost, Semi_Annual_Raise):
+
+def first(Annual_Salary, Total_Cost, Semi_Annual_Raise, Total_Months):
 # setting up what the monthly salary is as well as how much the down payment should be and the ROI percentage
-    Monthly_Salary = Annual_Salary / 12
+    Monthly_Salary = float(Annual_Salary / 12)
     Portion_Down_Payment = 0.25
     Return_On_Investment = 0.04
 # figuring out how much the down payment should be based on the total cost
     Down_Payment_Amount = Total_Cost * Portion_Down_Payment
     # Down_Payment_Amount = int(Down_Payment_Amount)
 # adding to Current_Savings until it is >= Down_Payment_Amount
-    Current_Savings = 0
-    Months = 0
-    while Current_Savings <= Down_Payment_Amount:
-        Current_Savings = Current_Savings 
-        # Current_Savings = Current_Savings + ((Monthly_Salary) + (Current_Savings * Return_On_Investment / 12))
-        Months = Months + 1
-        if DivisibleBySix(Months):
-            Annual_Salary = (Annual_Salary * Semi_Annual_Raise) + Annual_Salary
-            Monthly_Salary = Annual_Salary / 12
+    Current_Savings = 0.0
+    Portion_Saved = 0.00
+    while Current_Savings < Down_Payment_Amount:
+        Months = 0
+        Portion_Saved = Portion_Saved + 0.001
+        Current_Savings = 0
+        while Months < Total_Months:
+            Current_Savings = float(Current_Savings) + float((Monthly_Salary * Portion_Saved) + (Current_Savings * Return_On_Investment / 12.0))
+            Months = Months + 1
+            if DivisibleBySix(Months):
+                Annual_Salary = (Annual_Salary * Semi_Annual_Raise) + Annual_Salary
+                Monthly_Salary = float(Annual_Salary / 12)
+    print(Current_Savings, Portion_Saved, Down_Payment_Amount)
 
     # print("The total amount of months to save:", Months)
 
@@ -27,8 +31,8 @@ def DivisibleBySix(Months):
         return True
     else:
         return False
-"""
 
+"""
 def second(Annual_Salary, Total_Cost, Semi_Annual_Raise, Months):
     Monthly_Salary = Annual_Salary / 12
     Portion_Down_Payment = 0.25
@@ -42,19 +46,16 @@ def second(Annual_Salary, Total_Cost, Semi_Annual_Raise, Months):
 
 
 # second(Annual_Salary, 1000000, 0.07, Months)
-
+"""
 def runme():
-    Annual_Salary = int(input("Please enter annual salary:"))
+    Annual_Salary = 120000
     # Portion_Saved = float(input("Please enter percentage of monthly salary to save:"))
     # Total_Cost = int(input("Please enter the total cost of dream home:"))
     # Semi_Annual_Raise = float(input("Please enter your annual raise percentage:"))
-    Months = int(input("How many Months do you have to save:"))
+    Months = 36
     # first(Annual_Salary, 1000000, 0.07, Months)
-    second(Annual_Salary, 1000000, 0.07, Months)
+    first(Annual_Salary, 1000000, 0.07, Months)
 
-"""
-Take the number of months, and subtract 1 each loop, every 6 increase the Monthly_Salary by the
-semi annual raise amount.
-"""
+
 
 runme()
