@@ -43,10 +43,10 @@ def second(Annual_Salary, Total_Cost, Semi_Annual_Raise, Months):
     # while Current_Savings <= Down_Payment_Amount:
     #     Current_Savings = Current_Savings + (Monthly_Salary)
     print("Here is the percentage of your monthly salary to save:", Percent_Of_Monthly_Salary)
-
+"""
 
 # second(Annual_Salary, 1000000, 0.07, Months)
-"""
+
 def runme():
     Annual_Salary = 120000
     # Portion_Saved = float(input("Please enter percentage of monthly salary to save:"))
@@ -58,4 +58,4 @@ def runme():
 
 
 
-runme()
+# runme()
