@@ -6,8 +6,8 @@ lst = list(range(1, 101))
 # val = 14
 def FindBest(lst):
     lstlen = len(lst)
-    fun = lst[lstlen - 1]
-    print(fun)
+    fun = lst[lstlen]
+    print(lstlen)
 
 
 FindBest(lst)
