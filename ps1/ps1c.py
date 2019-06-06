@@ -38,13 +38,9 @@ def NearlyEqual(target, current, tolerance):
     else:
         return False
 
-target = 250000
-tolerance = 100
-current = 249950
-
-
-
-
+# print(NearlyEqual(target, current, tolerance))
+# test1 = NearlyEqual(-1, 3, 2)
+# print(test1)
 
 """
 def second(Annual_Salary, Total_Cost, Semi_Annual_Raise, Months):
@@ -73,6 +69,4 @@ def runme():
 
 
 # runme()
-print(NearlyEqual(target, current, tolerance))
-test1 = NearlyEqual(-1, 3, 2)
-print(test1)
+
