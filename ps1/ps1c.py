@@ -6,7 +6,6 @@ def first(Annual_Salary, Total_Cost, Semi_Annual_Raise, Total_Months):
     Return_On_Investment = 0.04
 # figuring out how much the down payment should be based on the total cost
     Down_Payment_Amount = Total_Cost * Portion_Down_Payment
-    # Down_Payment_Amount = int(Down_Payment_Amount)
 # adding to Current_Savings until it is >= Down_Payment_Amount
     Current_Savings = 0.0
     Portion_Saved = 0.00
@@ -21,8 +20,6 @@ def first(Annual_Salary, Total_Cost, Semi_Annual_Raise, Total_Months):
                 Annual_Salary = (Annual_Salary * Semi_Annual_Raise) + Annual_Salary
                 Monthly_Salary = float(Annual_Salary / 12)
     print(Current_Savings, Portion_Saved, Down_Payment_Amount)
-
-    # print("The total amount of months to save:", Months)
 
 def DivisibleBySix(Months):
     floatVal = Months / 6.0
@@ -42,18 +39,7 @@ def NearlyEqual(target, current, tolerance):
 # test1 = NearlyEqual(-1, 3, 2)
 # print(test1)
 
-"""
-def second(Annual_Salary, Total_Cost, Semi_Annual_Raise, Months):
-    Monthly_Salary = Annual_Salary / 12
-    Portion_Down_Payment = 0.25
-    Return_On_Investment = 0.04
-    Down_Payment_Amount = Total_Cost * Portion_Down_Payment
-    Required_Per_Month = Down_Payment_Amount / Months
-    Percent_Of_Monthly_Salary = Required_Per_Month / Monthly_Salary
-    # while Current_Savings <= Down_Payment_Amount:
-    #     Current_Savings = Current_Savings + (Monthly_Salary)
-    print("Here is the percentage of your monthly salary to save:", Percent_Of_Monthly_Salary)
-"""
+
 
 # second(Annual_Salary, 1000000, 0.07, Months)
 
@@ -87,3 +73,27 @@ def runme():
 
 runme()
 
+
+
+
+
+
+
+
+
+
+# Unnecessary crap goes below here
+
+
+"""
+def second(Annual_Salary, Total_Cost, Semi_Annual_Raise, Months):
+    Monthly_Salary = Annual_Salary / 12
+    Portion_Down_Payment = 0.25
+    Return_On_Investment = 0.04
+    Down_Payment_Amount = Total_Cost * Portion_Down_Payment
+    Required_Per_Month = Down_Payment_Amount / Months
+    Percent_Of_Monthly_Salary = Required_Per_Month / Monthly_Salary
+    # while Current_Savings <= Down_Payment_Amount:
+    #     Current_Savings = Current_Savings + (Monthly_Salary)
+    print("Here is the percentage of your monthly salary to save:", Percent_Of_Monthly_Salary)
+"""
