@@ -2,12 +2,12 @@
 This is where I start to mess around with lists
 """
 
-lst = list(range(1, 101))
-# val = 14
+lst = list(range(1, 100))
+
 def FindBest(lst):
     lstlen = len(lst)
-    fun = lst[0:lstlen - 50]
-    print(fun)
+    save_pct = lst[lstlen - 50]
+    print(save_pct)
 
 
 FindBest(lst)
