@@ -19,7 +19,12 @@ def first(Annual_Salary, Total_Cost, Semi_Annual_Raise, Total_Months):
             if DivisibleBySix(Months):
                 Annual_Salary = (Annual_Salary * Semi_Annual_Raise) + Annual_Salary
                 Monthly_Salary = float(Annual_Salary / 12)
-    print(Current_Savings, Portion_Saved, Down_Payment_Amount)
+        if NearlyEqual(Down_Payment_Amount, Current_Savings, 100):
+            print("You did it!")
+            print(str(Portion_Saved))
+        else:
+            first(Annual_Salary, 1000000, 0.07, 36)
+
 
 def DivisibleBySix(Months):
     floatVal = Months / 6.0
@@ -44,23 +49,23 @@ def NearlyEqual(target, current, tolerance):
 # second(Annual_Salary, 1000000, 0.07, Months)
 
 def runme():
-    print("Test Case 1")
-    print(">>>")
-    print("Enter the starting salary: 150000")
-    print("Best savings rate: 0.4411")
-    print("Steps in bisection search: 12")
-    print(">>>")
-    print("Test Case 2")
-    print(">>>")
-    print("Enter the starting salary: 300000")
-    print("Best savings rate: 0.2206")
-    print("Steps in bisection search: 9")
-    print(">>>")
-    print("Test Case 3")
-    print(">>>")
-    print("Enter the starting salary: 10000")
-    print("It is not possible to pay the down payment in three years.")
-    print(">>>")
+    # print("Test Case 1")
+    # print(">>>")
+    # print("Enter the starting salary: 150000")
+    # print("Best savings rate: 0.4411")
+    # print("Steps in bisection search: 12")
+    # print(">>>")
+    # print("Test Case 2")
+    # print(">>>")
+    # print("Enter the starting salary: 300000")
+    # print("Best savings rate: 0.2206")
+    # print("Steps in bisection search: 9")
+    # print(">>>")
+    # print("Test Case 3")
+    # print(">>>")
+    # print("Enter the starting salary: 10000")
+    # print("It is not possible to pay the down payment in three years.")
+    # print(">>>")
     Annual_Salary = int(input("Please enter the starting salary:"))
     # Portion_Saved = float(input("Please enter percentage of monthly salary to save:"))
     # Total_Cost = int(input("Please enter the total cost of dream home:"))
