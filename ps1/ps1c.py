@@ -19,12 +19,11 @@ def first(Annual_Salary, Total_Cost, Semi_Annual_Raise, Total_Months):
             if DivisibleBySix(Months):
                 Annual_Salary = (Annual_Salary * Semi_Annual_Raise) + Annual_Salary
                 Monthly_Salary = float(Annual_Salary / 12)
+                
         if NearlyEqual(Down_Payment_Amount, Current_Savings, 100):
             print("You did it!")
-            print(str(Portion_Saved))
         else:
-            first(Annual_Salary, 1000000, 0.07, 36)
-
+            print("Not quite")
 
 def DivisibleBySix(Months):
     floatVal = Months / 6.0
@@ -39,6 +38,9 @@ def NearlyEqual(target, current, tolerance):
         return True
     else:
         return False
+
+def RateFinder():
+    
 
 # print(NearlyEqual(target, current, tolerance))
 # test1 = NearlyEqual(-1, 3, 2)
