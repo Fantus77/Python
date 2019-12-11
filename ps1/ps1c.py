@@ -68,7 +68,7 @@ def runme():
     # print("Enter the starting salary: 10000")
     # print("It is not possible to pay the down payment in three years.")
     # print(">>>")
-    Annual_Salary = int(input("Please enter the starting salary:"))
+    Annual_Salary = int(input("Please enter annual salary:"))
     # Portion_Saved = float(input("Please enter percentage of monthly salary to save:"))
     # Total_Cost = int(input("Please enter the total cost of dream home:"))
     # Semi_Annual_Raise = float(input("Please enter your annual raise percentage:"))
